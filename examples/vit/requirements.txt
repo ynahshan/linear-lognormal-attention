@@ -1,0 +1,10 @@
+torch
+torchvision
+pytorch-fast-transformers
+linformer
+vit-pytorch
+numpy
+pillow
+scikit-learn
+tqdm
+zipp

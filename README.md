@@ -1,1 +1,1 @@
-# linear-lognormal-attention
+# Linear Log-Normal Attention

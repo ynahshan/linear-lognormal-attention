@@ -23,6 +23,7 @@ def get_args():
     parser.add_argument("--attn", type=str, default="softmax",
                         help="options: softmax, lln, linformer")
     parser.add_argument('--epochs', type=int, default=20)
+    parser.add_argument('--patch-size', type=int, default=7)
     args = parser.parse_args()
     return args
 
@@ -30,6 +31,7 @@ args = get_args()
 print(args)
 
 # Training settings
+patch_size=args.patch_size
 batch_size = 64
 epochs = args.epochs
 lr = 3e-5
@@ -171,7 +173,7 @@ def build_model(emb_dim=128, patch_size=8, image_size=224):
     return model
 
 
-model = build_model(patch_size=7)
+model = build_model(patch_size=patch_size)
 print(model)
 
 # loss function

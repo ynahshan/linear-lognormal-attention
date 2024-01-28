@@ -3,7 +3,7 @@
 A PyTorch implementation of Linear Log-Normal Attention with Unbiased Concentration - [arxiv](https://arxiv.org/abs/2311.13541).
 
 <p align="center">
-    <img src="fig/LLN_transfomer_layer.png" width="600px"></img>
+    <img src="fig/LLN_transfomer_layer.png" width="500px"></img>
 </p>
 
 ## Install requirements

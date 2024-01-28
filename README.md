@@ -31,6 +31,10 @@ mask = torch.tril(torch.ones(1, 1, 512, 512)).type(torch.bool)
 out = lin_attn(q, k, v, mask)
 ```
 
+## Examples
+
+Run simple ViT model with LLN Attention - [ViT LLN](examples/vit/README.md)
+
 ## Citations
 
 ```bibtex

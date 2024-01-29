@@ -17,18 +17,18 @@ $ pip install -r requirements.txt
 import torch
 from lln.lln_attention import LLNPlusDiagAttention
 
-lin_attn = LLNPlusDiagAttention(size_per_head=64, num_heads=12, eps=1e-5)
+lln_attn = LLNPlusDiagAttention(size_per_head=64, num_heads=12, eps=1e-5)
 
 q = torch.randn(1, 12, 512, 64)
 k = torch.randn(1, 12, 512, 64)
 v = torch.randn(1, 12, 512, 64)
 
 # MLM (no mask)
-out = lin_attn(q, k, v)
+out = lln_attn(q, k, v)
 
 # Language model (causal mask)
 mask = torch.tril(torch.ones(1, 1, 512, 512)).type(torch.bool)
-out = lin_attn(q, k, v, mask)
+out = lln_attn(q, k, v, mask)
 ```
 
 ## Examples
